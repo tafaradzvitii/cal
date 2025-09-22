@@ -1,0 +1,115 @@
+/* Reset and full-screen setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Calculator container filling screen */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    width: 90%;
+    max-width: 500px;
+    background-color: #1e1e2f;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    padding: 10px;
+}
+
+/* Display */
+.display {
+    background-color: black;
+    color: #00ffcc;
+    font-size: 3rem;
+    text-align: right;
+    padding: 20px;
+    border-radius: 15px;
+    overflow-x: auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Buttons Grid filling remaining space */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, 1fr);
+    gap: 10px;
+    flex: 3;
+}
+
+/* Buttons */
+.btn {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #fff;
+    background-color: #3e3e5e;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hover effect */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Operators */
+.operator {
+    background-color: #ff9500;
+}
+
+.operator:hover {
+    background-color: #e08e00;
+}
+
+/* Equal button */
+.equal {
+    background-color: #34c759;
+    grid-row: span 2;
+}
+
+.equal:hover {
+    background-color: #28a745;
+}
+
+/* Clear button */
+.clear {
+    background-color: #ff3b30;
+}
+
+.clear:hover {
+    background-color: #e03227;
+}
+
+/* Zero button spans two columns */
+.zero {
+    grid-column: span 2;
+}
+
+/* Credit text */
+.credit {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    font-style: italic;
+    margin-top: 5px;
+}
